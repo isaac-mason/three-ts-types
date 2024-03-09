@@ -11,9 +11,13 @@ export default class VarNode extends Node {
     op(op: OperatorNodeOp, ...params: Node[]): this;
     assign(...params: Node[]): this;
     add(...params: Node[]): this;
+    addAssign(...params: Node[]): this;
     sub(...params: Node[]): this;
+    subAssign(...params: Node[]): this;
     mul(...params: Node[]): this;
+    mulAssign(...params: Node[]): this;
     div(...params: Node[]): this;
+    divAssign(...params: Node[]): this;
 }
 
 export const temp: (node: NodeRepresentation, name?: string | null) => ShaderNodeObject<VarNode>;
